@@ -11,9 +11,10 @@ module.exports = {
   },
   themeConfig: {
     smoothScroll: true,
+    backToTop: true,
     nav: require("./config/nav"),
     sidebar: require("./config/sidebar"),
-    lastUpdated: "Last Updated",
+    lastUpdated: "上次更新",
     repo: "https://github.com/agangdundan/mydocs",
     editLinks: false,
   },
