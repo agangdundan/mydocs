@@ -22,7 +22,9 @@ git commit -m 'deploy'
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
+git remote add origin https://github.com/agangdundan/mydocs.git
+git branch -M gh-pages
 # 如果使用 travis 持续集成
-git push -f https://${access_token}@github.com/agangdundan/mydocs.git main:gh-pages
+git push -f https://${access_token}@github.com/agangdundan/mydocs.git
 
 cd -
