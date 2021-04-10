@@ -1,25 +1,28 @@
 #!/usr/bin/env sh
 
-# abort on errors
+# 确保脚本抛出遇到的错误
 set -e
 
-# build
-npm run build
+# 生成静态文件
+yarn run build
 
-# navigate into the build output directory
+# 进入生成的文件夹
 cd docs/.vuepress/dist
 
-# if you are deploying to a custom domain
+# 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
 
 git init
 git add -A
 git commit -m 'deploy'
 
-# if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
+# 如果发布到 https://<USERNAME>.github.io
+# git push -f git@github.com:7revor/7revor.github.io.git master
 
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
+# 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
+
+# 如果使用 travis 持续集成
+git push -f https://${access_token}@github.com/agangdundan/mydocs.git main:gh-pages
 
 cd -
