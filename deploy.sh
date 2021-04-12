@@ -36,7 +36,7 @@ git push -f https://${access_token}@github.com/agangdundan/mydocs.git
 cd /home/travis/build/agangdundan/mydocs/docs/.vuepress/dist-gitee
 git init
 git add -A
-git remote add origin https://gitee.com/agangdundan/mydocs.git
+git remote add gitee-mydocs https://gitee.com/agangdundan/mydocs.git
 git branch -M gh-pages
 # 推送至gitee
 git push -f https://userName:${access_token_gitee}@gitee.com/agangdundan/mydocs.git
