@@ -3,10 +3,12 @@
 # 确保脚本抛出遇到的错误
 set -e
 
+mkdir docs/.vuepress/dist-gitee
+
 # 生成静态文件
 yarn run build
 
-mkdir docs/.vuepress/dist-gitee
+
 cp -rf docs/.vuepress/dist docs/.vuepress/dist-gitee
 
 # 进入生成的文件夹
