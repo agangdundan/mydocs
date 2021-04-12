@@ -7,7 +7,7 @@ set -e
 
 # 生成静态文件
 yarn run build
-
+yarn run build-gitee
 
 #cp -rf docs/.vuepress/dist docs/.vuepress/dist-gitee
 
@@ -32,7 +32,7 @@ git branch -M gh-pages
 # 如果使用 travis 持续集成
 git push -f https://${access_token}@github.com/agangdundan/mydocs.git
 
-yarn run build-gitee
+
 cd docs/.vuepress/dist-gitee
 git init
 git add -A
