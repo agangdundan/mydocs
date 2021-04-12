@@ -33,7 +33,7 @@ git branch -M gh-pages
 git push -f https://${access_token}@github.com/agangdundan/mydocs.git
 
 
-cd docs/.vuepress/dist-gitee
+cd /home/travis/build/agangdundan/mydocs/docs/.vuepress/dist-gitee
 git init
 git add -A
 git remote add origin https://gitee.com/agangdundan/mydocs.git
