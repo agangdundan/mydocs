@@ -6,6 +6,8 @@ set -e
 # 生成静态文件
 yarn run build
 
+cp -rf docs/.vuepress/dist docs/.vuepress/dist-gitee
+
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
@@ -26,5 +28,14 @@ git remote add origin https://github.com/agangdundan/mydocs.git
 git branch -M gh-pages
 # 如果使用 travis 持续集成
 git push -f https://${access_token}@github.com/agangdundan/mydocs.git
+
+cd docs/.vuepress/dist-gitee
+git init
+git add -A
+git remote add origin https://gitee.com/agangdundan/mydocs.git
+git branch -M gh-pages
+# 推送至gitee
+git push -f https://userName:${access_token_gitee}@gitee.com/agangdundan/mydocs.git
+
 
 cd -
