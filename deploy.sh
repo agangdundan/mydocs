@@ -6,6 +6,7 @@ set -e
 # 生成静态文件
 yarn run build
 
+mkdir docs/.vuepress/dist-gitee
 cp -rf docs/.vuepress/dist docs/.vuepress/dist-gitee
 
 # 进入生成的文件夹
