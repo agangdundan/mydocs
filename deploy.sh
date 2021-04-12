@@ -3,13 +3,13 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-mkdir -p docs/.vuepress/dist-gitee
+#mkdir -p docs/.vuepress/dist-gitee
 
 # 生成静态文件
 yarn run build
 
 
-cp -rf docs/.vuepress/dist docs/.vuepress/dist-gitee
+#cp -rf docs/.vuepress/dist docs/.vuepress/dist-gitee
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
@@ -32,6 +32,7 @@ git branch -M gh-pages
 # 如果使用 travis 持续集成
 git push -f https://${access_token}@github.com/agangdundan/mydocs.git
 
+yarn run build-gitee
 cd docs/.vuepress/dist-gitee
 git init
 git add -A
