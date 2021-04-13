@@ -40,7 +40,7 @@ git commit -m 'deploy'
 git remote add origin https://gitee.com/agangdundan/mydocs.git
 git branch -M gh-pages
 # 推送至gitee
-git push -f https://userName:${access_token_gitee}@gitee.com/agangdundan/mydocs.git
+git push -f https://agangdundan:${GITEE_TOKEN}@gitee.com/agangdundan/mydocs.git
 
 
 cd -
