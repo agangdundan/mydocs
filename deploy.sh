@@ -7,7 +7,7 @@ set -e
 
 # 生成静态文件
 yarn run build
-yarn run build-gitee
+
 
 #cp -rf docs/.vuepress/dist docs/.vuepress/dist-gitee
 
@@ -33,14 +33,15 @@ git branch -M gh-pages
 git push -f https://${access_token}@github.com/agangdundan/mydocs.git
 
 
-cd /home/travis/build/agangdundan/mydocs/docs/.vuepress/dist-gitee
-git init
-git add -A
-git commit -m 'deploy-gitee'
-git remote add origin https://gitee.com/agangdundan/mydocs.git
-git branch -M gh-pages
+#yarn run build-gitee
+#cd /home/travis/build/agangdundan/mydocs/docs/.vuepress/dist-gitee
+#git init
+#git add -A
+#git commit -m 'deploy-gitee'
+#git remote add origin https://gitee.com/agangdundan/mydocs.git
+#git branch -M gh-pages
 # 推送至gitee
-git push -f https://agangdundan:${GITEE_TOKEN}@gitee.com/agangdundan/mydocs.git
+#git push -f https://agangdundan:${GITEE_TOKEN}@gitee.com/agangdundan/mydocs.git
 
 
 cd -
